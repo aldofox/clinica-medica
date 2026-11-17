@@ -1,0 +1,50 @@
+.banner {
+  padding: 70px 0;
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, #fff 100%);
+}
+
+.banner-head { text-align: center; margin-bottom: 36px; }
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: var(--color-primary);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 12px;
+}
+.banner-head h2 { font-size: 2rem; }
+.banner-head p { color: var(--color-text-muted); max-width: 600px; margin: 0 auto; }
+
+.banner-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.dica-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.dica-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.dica-icon {
+  width: 56px; height: 56px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  border-radius: 50%;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+.dica-card h3 { font-size: 1.05rem; margin-bottom: 6px; }
+.dica-card p { color: var(--color-text-muted); font-size: 0.9rem; margin: 0; }
+
+@media (max-width: 860px) { .banner-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .banner-grid { grid-template-columns: 1fr; } .banner-head h2 { font-size: 1.5rem; } }
